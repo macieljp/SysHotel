@@ -1,0 +1,86 @@
+
+
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.edu.utfpr.cm.tsi</groupId>
+    <artifactId>SysDistribuidora</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    
+    <repositories> <!--These are needed for Swing/Netbeans --> 
+        <repository> 
+            <id>maven2-repository.netbeans.maven2</id> 
+            <name>Netbeans Maven Repository</name> 
+            <url>http://bits.netbeans.org/maven2/</url> 
+            <layout>default</layout> 
+        </repository> 
+    </repositories> 
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <plugins> 
+            
+            <plugin> 
+                <groupId>org.apache.maven.plugins</groupId> 
+                <artifactId>maven-compiler-plugin</artifactId> 
+                <version>2.3.2</version> 
+                <configuration> 
+                    <source>1.7</source> 
+                    <target>1.7</target> 
+                </configuration> 
+            </plugin> 
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>br/edu/utfpr/cm/tsi/pi/syshotel/main/Main</mainClass>
+                </configuration>
+            </plugin>
+            
+        </plugins>
+        
+        <resources> 
+        
+            <resource> 
+                <directory>br/edu/utfpr/cm/tsi/pi/icons</directory> 
+            </resource> 
+
+            <resource> 
+                <directory>br/edu/utfpr/cm/tsi/pi/PROJECT</directory> 
+            </resource> 
+        
+        </resources>
+    </build>    
+    
+    <dependencies> 
+        <dependency> 
+            <groupId>junit</groupId> 
+            <artifactId>junit</artifactId> 
+            <version>3.8.1</version> 
+            <scope>test</scope> 
+        </dependency> 
+        
+        <dependency> 
+            <groupId>org.hibernate</groupId> 
+            <artifactId>hibernate-core</artifactId> 
+            <version>3.6.10.Final</version> 
+        </dependency>
+        
+        
+        <dependency> 
+            <groupId>org.netbeans.external</groupId> 
+            <artifactId>AbsoluteLayout</artifactId> 
+            <version>RELEASE701</version> 
+        </dependency>
+        
+        <dependency> 
+            <groupId>mysql</groupId> 
+            <artifactId>mysql-connector-java</artifactId> 
+            <version>5.1.27</version> 
+        </dependency> 
+    </dependencies>
+    
+
+    
+    
+</project>
